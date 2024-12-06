@@ -1,0 +1,239 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_opszwght.ttf);
+}
+@font-face {
+    font-family: "Work Sans";
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mid: #AAA;
+    --dark: #000;
+    --light: #FFF;
+    --pad-lr: 10vw;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Work Sans", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: "Inter";
+    font-size: 9rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    line-height: 8rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* - === CLASSES === */
+
+.btn {
+    border: 1px solid var(--mid);
+    color: var(--light);
+    padding: 1.2rem 3rem;
+
+    &:hover {
+        background-color: var(--mid);
+        color: var(--dark);
+    }
+}
+
+.bg-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.bg-light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.flex {
+    display: flex;
+}
+
+/* - === HEADER === */
+
+header {
+    height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 var(--pad-lr) 5vh;
+
+    .hero {
+        .line {
+            width: 1px;
+            height: 25vh;
+            background-color: #ffffff50;
+            margin: 0 auto 7vh;
+        }
+        h1 {
+            line-height: 7rem;
+
+            span {
+                color: var(--dark);
+                -webkit-text-stroke: 1px var(--light);
+                display: block;
+                paint-order: stroke fill;
+            }
+        }
+    }
+
+    .btn-bar {
+        justify-content: space-between;
+
+        img {
+            width: 4rem;
+        }
+    }
+}
+
+/* - === MAIN === */
+
+main {
+    section {
+        padding: 12vh var(--pad-lr);
+
+        ul {
+            li:nth-of-type(odd) {
+                font-size: 1.4rem;
+            }
+            li:nth-of-type(even) {
+                font-size: 10rem;
+                font-weight: 700;
+                font-family: "Inter";
+            }
+        }
+    }
+
+    section.stats {
+        flex-direction: column;
+        gap: 20vh;
+        background-color: var(--dark);
+        background-image: url(../img/map.svg);
+        background-position: 95% 95%;
+        background-repeat: no-repeat;
+        background-size: 65vh auto;
+    }
+
+    section.middle {
+        flex-direction: column;
+        gap: 80vh;
+        padding: 60vh 32vw 40vh;
+        position: relative;
+
+        p {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+
+        img {
+            position: absolute;
+            z-index: 10;
+            
+            &.bigger {
+                width: 30%;
+            }
+
+            &.smaller {
+                width: 20%;
+            }
+
+            &.one {
+                top: -3%;
+                right: 6vw;
+            }
+
+            &.two {
+                top: 15%;
+                left: 4vw;
+            }
+
+            &.three {
+                top: 35%;
+                right: 0;
+            }
+
+            &.four {
+                top: 43%;
+                left: 15vw;
+            }
+
+            &.five {
+                top: 52%;
+                right: 15vw;
+            }
+
+            &.six {
+                bottom: 20%;
+                left: 0;
+            }
+
+            &.seven {
+                bottom: -3%;
+                left: 50%;
+            }
+        }
+    }
+
+    section.bear {
+        position: relative;
+        padding-top: 20vh;
+        height: 150vh;
+
+        div {
+            gap: 20vw;
+            align-items: center;
+
+            article {
+                p {
+                    font-size: 2rem;
+    
+                    &.quote {
+                        font-size: 3rem;
+                        font-weight: 700;
+                        font-family: "Inter";
+                    }
+                }
+            }
+    
+            img {
+                position: absolute;
+                bottom: -5%;
+                left: 15vw;
+                width: 30%;
+            }
+        }
+    }
+}
+
+/* - === FOOTER === */
