@@ -207,30 +207,47 @@ main {
 
     section.bear {
         position: relative;
-        padding-top: 20vh;
-        height: 150vh;
+        padding-top: 25vh;
+        height: 160vh;
+
+        &.bg-light {
+            padding-top: 45vh;
+        }
+
+        p {
+            font-size: 2rem;
+        }
 
         div {
             gap: 20vw;
-            align-items: center;
 
             article {
-                p {
-                    font-size: 2rem;
-    
-                    &.quote {
-                        font-size: 3rem;
-                        font-weight: 700;
-                        font-family: "Inter";
-                    }
+                .quote {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    font-family: "Inter";
                 }
             }
-    
-            img {
-                position: absolute;
+        }
+
+        img {
+            position: absolute;
+            z-index: 10;
+
+            &.right {
+                right: 10vw;
+            }
+            &.left {
+                left: 10vw;
+            }
+            &.big {
+                width: 55%;
+                bottom: -12%;
+            }
+            &.small {
+                width: 28%;
                 bottom: -5%;
-                left: 15vw;
-                width: 30%;
+                z-index: 20;
             }
         }
     }
